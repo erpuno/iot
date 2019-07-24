@@ -1,0 +1,9 @@
+{application, iot,
+ [
+  {description, "IoT Device Management Platform"},
+  {vsn, "0.7.0"},
+  {registered, []},
+  {applications, [kernel,stdlib]},
+  {mod, { iot, []}},
+  {env, []}
+ ]}.
