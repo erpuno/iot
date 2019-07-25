@@ -3,6 +3,10 @@
 
 -include("location.hrl").
 
+% 1. register new device
+% kvs:append(#'Device'{id = kvs:seq([],[])},
+%              "/iot/:client/:model").
+
 -record('Device', { id           = [] :: [] | term(),
                     cn           = [] :: [] | binary(),
                     owner        = [] :: [] | binary(),
@@ -18,7 +22,7 @@
                     ipv4         = [] :: [] | binary(),
                     ipv6         = [] :: [] | binary(),
                     os           = [] :: [] | atom(),
-                    properties   = [] :: list(),
+                    properties   = [] :: list(), % dict for voltage, MHz, ....
                     protocol     = [] :: list(),
                     speed        = 00 :: integer(),
                     path         = [] :: list(),

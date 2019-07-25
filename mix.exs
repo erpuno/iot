@@ -23,12 +23,17 @@ defmodule IOT.Mixfile do
   end
 
   def application() do
-    [mod: {:iot, []}]
+    [
+      mod: {:iot, []},
+       applications: [:rocksdb, :kvs]
+    ]
   end
 
   def deps() do
     [
-      {:ex_doc, "~> 0.20.2", only: :dev}
+      {:ex_doc, "~> 0.20.2", only: :dev},
+      {:rocksdb, "~> 1.2.0"},
+      {:kvs, "~> 6.7.6"}
     ]
   end
 end

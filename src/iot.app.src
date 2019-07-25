@@ -3,7 +3,7 @@
   {description, "IoT Device Management Platform"},
   {vsn, "0.7.1"},
   {registered, []},
-  {applications, [kernel,stdlib]},
+  {applications, [kernel,stdlib,kvs]},
   {mod, { iot, []}},
   {env, []}
  ]}.

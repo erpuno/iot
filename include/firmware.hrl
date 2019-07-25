@@ -5,7 +5,8 @@
 
 -record('Firmware', { id         = [] :: [] | term(),
                       vsn        = [] :: [] | term(),
-                      devices    = [] :: [] | #'Device'{},
+                      models     = [] :: list(),
+                      devices    = [] :: [] | #'Device'{}, % wildcard pattern
                       payload    = [] :: [] | binary() }).
 
 -endif.
