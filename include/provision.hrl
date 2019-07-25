@@ -7,9 +7,9 @@
 -record('Provision', { id           = [] :: [] | term(),
                        program      = [] :: [] | binary(),
                        path         = [] :: [] | binary(),
-                       firmware     = [] :: [] | #'Firmware'().
-                       paramaters   = [] :: [] | #'Device'(),
-                       target       = [] :: [] | #'Device'()
+                       firmware     = [] :: [] | #'Firmware'{},
+                       paramaters   = [] :: [] | #'Device'{},
+                       target       = [] :: [] | #'Device'{}
                     }).
 
 -endif.

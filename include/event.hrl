@@ -4,14 +4,14 @@
 -include("location.hrl").
 
 -record('Event', { id           = [] :: [] | term(),
-                   date         = [] :: [] | date(),
-                   time         = [] :: [] | time().
+                   date         = [] :: [] | {integer(),integer(),integer()},
+                   time         = [] :: [] | {integer(),integer(),integer()},
                    code         = [] :: [] | binary(),
                    type         = [] :: [] | atom(),
                    kind         = [] :: [] | atom(),
                    subsystem    = [] :: [] | atom(),
                    device       = [] :: [] | binary(),
-                   payload      = [] :: [] | binary(),
+                   payload      = [] :: [] | binary()
         }).
 
 -endif.

@@ -14,7 +14,7 @@ defmodule IOT.Mixfile do
 
   def package do
     [
-      files: ~w(doc src mix.exs LICENSE),
+      files: ~w(doc src lib include mix.exs README* LICENSE),
       licenses: ["ISC"],
       maintainers: ["Namdak Tonpa"],
       name: :iot,
