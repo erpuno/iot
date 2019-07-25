@@ -2,6 +2,9 @@
 -compile(export_all).
 -behaviour(application).
 -behaviour(supervisor).
+-include("device.hrl").
+-include("firmware.hrl").
+-include("location.hrl").
 -export([start/2, stop/1, init/1]).
 
 start(_StartType, _StartArgs) -> supervisor:start_link({local, ?MODULE}, ?MODULE, []).

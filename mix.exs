@@ -1,10 +1,10 @@
-defmodule IoT.Mixfile do
+defmodule IOT.Mixfile do
   use Mix.Project
 
   def project() do
     [
       app: :iot,
-      version: "0.7.0",
+      version: "0.7.1",
       elixir: "~> 1.7",
       description: "IoT Device Management Platform",
       package: package(),
