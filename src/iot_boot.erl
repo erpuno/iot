@@ -14,7 +14,7 @@
 
 register_devices(Client, Model) ->
    kvs:append(#'Device'{id =
-      kvs:seq([],[])}, "/iot/" ++ Client ++ "/" ++ Model).
+      kvs:seq([],[])}, "/iot/dev/" ++ Client ++ "/" ++ Model).
 
 register_event(Id,#'Event'{}=Event) ->
    kvs:append(Event#'Event'{id = kvs:seq([],[])}, "/iot/" ++ Id).
@@ -27,7 +27,7 @@ boot_events() ->
                    device=id,
                    from=Client,
                    to=Client
-                   }) end, kvs:all("/iot/" ++ Client))
+                   }) end, kvs:all("/iot/dev/" ++ Client))
       end, kvs:all("/iot/clients")).
 
 boot_models(#'Person'{cn=Client}) ->
