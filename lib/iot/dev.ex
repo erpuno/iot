@@ -11,7 +11,7 @@ defmodule IOT.Rows.Device do
 
   def id(), do: IOT."Device"()
 
-  def new(name, IOT."Device"(id: id, type: type, location: loc, serial: sn, model: model)) do
+  def new(name, IOT."Device"(id: id, manufacturer: man, type: type, location: loc, serial: sn, model: model)) do
 
     panel(
       id: FORM.atom([:tr, name]),
@@ -20,6 +20,10 @@ defmodule IOT.Rows.Device do
         panel(
           class: :column6,
           body: NITRO.compact(id)
+        ),
+          panel(
+          class: :column6,
+          body: NITRO.compact(man)
         ),
         panel(
           class: :column6,

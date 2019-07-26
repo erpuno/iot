@@ -11,6 +11,7 @@ defmodule IOT.Index do
       class: :th,
       body: [
         panel(class: :column6, body: "Id"),
+        panel(class: :column20, body: "Manufacturer"),
         panel(class: :column10, body: "Name"),
         panel(class: :column6, body: "Type"),
         panel(class: :column20, body: "Location"),
