@@ -4,7 +4,7 @@ defmodule IOT.Mixfile do
   def project() do
     [
       app: :iot,
-      version: "0.7.1",
+      version: "0.7.2",
       elixir: "~> 1.7",
       description: "IoT Device Management Platform",
       package: package(),
