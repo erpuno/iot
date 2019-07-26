@@ -48,7 +48,17 @@ clients() ->
     #'Person'{id="4",cn="Georgi"},
     #'Person'{id="5",cn="Vyacheslav"} ].
 
+index_PersonCN() ->
+   lists:map(fun (#'Person'{id=ID,cn=CN}) ->
+      kvs:put(#'PersonCN'{cn=CN,id=ID}) end, clients()).
+
 boot() ->
+   boot_root(),
+   boot_clients(),
+   index_PersonCN(),
+   boot_events().
+
+boot_root() ->
     Group   = [ #'Organization'{name="Quanterall"} ],
 
     Structure    = [ {"/iot/clients", clients()},

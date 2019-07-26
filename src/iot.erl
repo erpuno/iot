@@ -14,8 +14,6 @@
 start(_, _) ->
    kvs:join(),
    iot_boot:boot(),
-   iot_boot:boot_clients(),
-   iot_boot:boot_events(),
    supervisor:start_link({local, ?MODULE}, ?MODULE, []).
 stop(_State) -> ok.
 init([]) -> {ok, { {one_for_one, 5, 10}, []} }.

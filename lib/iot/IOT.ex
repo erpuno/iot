@@ -1,11 +1,34 @@
 defmodule IOT do
+  use N2O, with: [:nitro]
+  use FORM
   require Record
+
+  def extract(name, path, form) do
+    [name, path, form]
+      |> FORM.atom()
+      |> NITRO.q()
+      |> NITRO.to_list()
+  end
+
+  def box(mod, r) do
+    NITRO.clear(:stand)
+
+    rec =
+      case r do
+        [] -> mod.id
+        x -> x
+      end
+
+    NITRO.insert_bottom(:stand, FORM.new(mod.new(mod, rec), rec))
+  end
 
   Enum.each(
     [
       :device,
       :provision,
       :location,
+      :organization,
+      :person,
       :event,
       :firmware
     ],
