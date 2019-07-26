@@ -45,8 +45,8 @@ defmodule IOT.Index do
     IO.inspect :n2o.user()
 
     devices = case :n2o.user() do
-        [] -> []
-        IOT."Person"(cn: name) -> KVS.all('/iot/'++ name)
+        [] -> KVS.all('/iot/dev')
+        IOT."Person"(cn: name) -> KVS.all('/iot/dev/'++ name)
     end
 
     IO.inspect devices
