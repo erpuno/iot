@@ -15,8 +15,10 @@ defmodule NITRO.Routes do
   def route(<<"ldap", _::binary>>), do: LDAP.Index
   def route(<<"kvs", _::binary>>), do: KVS.Index
   def route(<<"iot", _::binary>>), do: IOT.Index
+  def route(<<"dev", _::binary>>), do: IOT.Device
   def route(<<"app/ldap", _::binary>>), do: LDAP.Index
   def route(<<"app/kvs", _::binary>>), do: KVS.Index
   def route(<<"app/iot", _::binary>>), do: IOT.Index
+  def route(<<"app/dev", _::binary>>), do: IOT.Device
   def route(_), do: LDAP.Index
 end

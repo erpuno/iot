@@ -53,8 +53,12 @@ defmodule IOT.Index do
     for i <- devices do
       NITRO.insert_bottom(:tableRow,
         IOT.Rows.Device.new(
-           FORM.atom([:row, IOT."Device"(i, :id)]), i))
+           FORM.atom([:iot, IOT."Device"(i, :id)]), i))
     end
+  end
+
+  def event({:device, id}) do
+    NITRO.redirect('dev.htm?p=' ++ id)
   end
 
   def event({:discard, []}), do: [NITRO.hide(:frms), NITRO.show(:ctrl)]

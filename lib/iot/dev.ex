@@ -11,12 +11,7 @@ defmodule IOT.Rows.Device do
 
   def id(), do: IOT."Device"()
 
-  def new(name,
-    IOT."Device"(id: id,
-                 type: type,
-                 location: loc,
-                 serial: sn,
-                 model: model)) do
+  def new(name, IOT."Device"(id: id, type: type, location: loc, serial: sn, model: model)) do
 
     panel(
       id: FORM.atom([:tr, name]),
@@ -28,7 +23,15 @@ defmodule IOT.Rows.Device do
         ),
         panel(
           class: :column6,
-          body: NITRO.compact(name)
+          body:
+                  link(
+                    postback: {:device, id},
+                    class: [:button, :sgreen],
+                    body: "Show",
+                    source: [],
+                    validate: []
+                  )
+
         ),
         panel(
           class: :column6,

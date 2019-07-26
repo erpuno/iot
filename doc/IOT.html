@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.20.2">
+    <meta name="project" content="iot v0.7.2">
+    <title>IOT — iot v0.7.2</title>
+    <link rel="stylesheet" href="dist/html-d9f58a6320b5bfa6dd77.css" />
+      <link rel="canonical" href="https://hexdocs.pm/iot/IOT.html" />
+    <script src="dist/sidebar_items-afc7b9c039.js"></script>
+      <script src="docs_config.js"></script>
+    <script async src="dist/html-d9f58a6320b5bfa6dd77.js"></script>
+  </head>
+  <body data-type="modules">
+    <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
+<div class="main">
+
+<button class="sidebar-button sidebar-toggle">
+  <span class="icon-menu" title="Collapse/expand sidebar"></span>
+</button>
+
+<section class="sidebar">
+  <form class="sidebar-search" action="search.html">
+    <button type="submit" class="search-button">
+      <span class="icon-search" aria-hidden="true"></span>
+    </button>
+    <button type="button" tabindex="-1" class="search-close-button">
+      <span class="icon-cross" title="Cancel search"></span>
+    </button>
+    <label class="search-label">
+      <input name="q" type="text" id="search-list" class="search-input" placeholder="Search..." aria-label="Search" autocomplete="off" />
+    </label>
+  </form>
+
+  <div class="autocomplete">
+    <div class="autocomplete-results">
+    </div>
+  </div>
+
+  <div class="sidebar-header">
+    <div class="sidebar-projectDetails">
+      <a href="api-reference.html" class="sidebar-projectName">
+iot      </a>
+      <h2 class="sidebar-projectVersion">
+        v0.7.2
+      </h2>
+    </div>
+  </div>
+
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list">Pages</a></li>
+
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+
+
+  </ul>
+  <div class="gradient"></div>
+  <ul id="full-list" class="sidebar-fullList"></ul>
+</section>
+
+<section class="content">
+  <div class="content-outer">
+    <div id="content" class="content-inner">
+
+      <h1>
+        <small class="app-vsn">iot v0.7.2</small>
+IOT      </h1>
+
+
+
+        <section id="summary" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#summary">
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
+            </a>
+            Summary
+          </h1>
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#Device/1">Device(args \\ [])</a>
+  </div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#Device/2">Device(record, args)</a>
+  </div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#Event/1">Event(args \\ [])</a>
+  </div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#Event/2">Event(record, args)</a>
+  </div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#Firmware/1">Firmware(args \\ [])</a>
+  </div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#Firmware/2">Firmware(record, args)</a>
+  </div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#Loc/1">Loc(args \\ [])</a>
+  </div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#Loc/2">Loc(record, args)</a>
+  </div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#Organization/1">Organization(args \\ [])</a>
+  </div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#Organization/2">Organization(record, args)</a>
+  </div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#Person/1">Person(args \\ [])</a>
+  </div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#Person/2">Person(record, args)</a>
+  </div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#PersonCN/1">PersonCN(args \\ [])</a>
+  </div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#PersonCN/2">PersonCN(record, args)</a>
+  </div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#Provision/1">Provision(args \\ [])</a>
+  </div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#Provision/2">Provision(record, args)</a>
+  </div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#box/2">box(mod, r)</a>
+  </div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#extract/3">extract(name, path, form)</a>
+  </div>
+</div>
+  </div>
+        </section>
+
+        <section id="functions" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#functions">
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
+            </a>
+Functions          </h1>
+          <div class="functions-list">
+<section class="detail" id="Device/1">
+    <span id="Device/0"></span>
+  <div class="detail-header">
+    <a href="#Device/1" class="detail-link" title="Link to this macro">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this macro</span>
+    </a>
+    <h1 class="signature">Device(args \\ [])</span>
+      <span class="note">(macro)</span>
+  </div>
+  <section class="docstring">
+  </section>
+</section>
+<section class="detail" id="Device/2">
+  <div class="detail-header">
+    <a href="#Device/2" class="detail-link" title="Link to this macro">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this macro</span>
+    </a>
+    <h1 class="signature">Device(record, args)</span>
+      <span class="note">(macro)</span>
+  </div>
+  <section class="docstring">
+  </section>
+</section>
+<section class="detail" id="Event/1">
+    <span id="Event/0"></span>
+  <div class="detail-header">
+    <a href="#Event/1" class="detail-link" title="Link to this macro">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this macro</span>
+    </a>
+    <h1 class="signature">Event(args \\ [])</span>
+      <span class="note">(macro)</span>
+  </div>
+  <section class="docstring">
+  </section>
+</section>
+<section class="detail" id="Event/2">
+  <div class="detail-header">
+    <a href="#Event/2" class="detail-link" title="Link to this macro">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this macro</span>
+    </a>
+    <h1 class="signature">Event(record, args)</span>
+      <span class="note">(macro)</span>
+  </div>
+  <section class="docstring">
+  </section>
+</section>
+<section class="detail" id="Firmware/1">
+    <span id="Firmware/0"></span>
+  <div class="detail-header">
+    <a href="#Firmware/1" class="detail-link" title="Link to this macro">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this macro</span>
+    </a>
+    <h1 class="signature">Firmware(args \\ [])</span>
+      <span class="note">(macro)</span>
+  </div>
+  <section class="docstring">
+  </section>
+</section>
+<section class="detail" id="Firmware/2">
+  <div class="detail-header">
+    <a href="#Firmware/2" class="detail-link" title="Link to this macro">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this macro</span>
+    </a>
+    <h1 class="signature">Firmware(record, args)</span>
+      <span class="note">(macro)</span>
+  </div>
+  <section class="docstring">
+  </section>
+</section>
+<section class="detail" id="Loc/1">
+    <span id="Loc/0"></span>
+  <div class="detail-header">
+    <a href="#Loc/1" class="detail-link" title="Link to this macro">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this macro</span>
+    </a>
+    <h1 class="signature">Loc(args \\ [])</span>
+      <span class="note">(macro)</span>
+  </div>
+  <section class="docstring">
+  </section>
+</section>
+<section class="detail" id="Loc/2">
+  <div class="detail-header">
+    <a href="#Loc/2" class="detail-link" title="Link to this macro">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this macro</span>
+    </a>
+    <h1 class="signature">Loc(record, args)</span>
+      <span class="note">(macro)</span>
+  </div>
+  <section class="docstring">
+  </section>
+</section>
+<section class="detail" id="Organization/1">
+    <span id="Organization/0"></span>
+  <div class="detail-header">
+    <a href="#Organization/1" class="detail-link" title="Link to this macro">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this macro</span>
+    </a>
+    <h1 class="signature">Organization(args \\ [])</span>
+      <span class="note">(macro)</span>
+  </div>
+  <section class="docstring">
+  </section>
+</section>
+<section class="detail" id="Organization/2">
+  <div class="detail-header">
+    <a href="#Organization/2" class="detail-link" title="Link to this macro">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this macro</span>
+    </a>
+    <h1 class="signature">Organization(record, args)</span>
+      <span class="note">(macro)</span>
+  </div>
+  <section class="docstring">
+  </section>
+</section>
+<section class="detail" id="Person/1">
+    <span id="Person/0"></span>
+  <div class="detail-header">
+    <a href="#Person/1" class="detail-link" title="Link to this macro">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this macro</span>
+    </a>
+    <h1 class="signature">Person(args \\ [])</span>
+      <span class="note">(macro)</span>
+  </div>
+  <section class="docstring">
+  </section>
+</section>
+<section class="detail" id="Person/2">
+  <div class="detail-header">
+    <a href="#Person/2" class="detail-link" title="Link to this macro">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this macro</span>
+    </a>
+    <h1 class="signature">Person(record, args)</span>
+      <span class="note">(macro)</span>
+  </div>
+  <section class="docstring">
+  </section>
+</section>
+<section class="detail" id="PersonCN/1">
+    <span id="PersonCN/0"></span>
+  <div class="detail-header">
+    <a href="#PersonCN/1" class="detail-link" title="Link to this macro">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this macro</span>
+    </a>
+    <h1 class="signature">PersonCN(args \\ [])</span>
+      <span class="note">(macro)</span>
+  </div>
+  <section class="docstring">
+  </section>
+</section>
+<section class="detail" id="PersonCN/2">
+  <div class="detail-header">
+    <a href="#PersonCN/2" class="detail-link" title="Link to this macro">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this macro</span>
+    </a>
+    <h1 class="signature">PersonCN(record, args)</span>
+      <span class="note">(macro)</span>
+  </div>
+  <section class="docstring">
+  </section>
+</section>
+<section class="detail" id="Provision/1">
+    <span id="Provision/0"></span>
+  <div class="detail-header">
+    <a href="#Provision/1" class="detail-link" title="Link to this macro">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this macro</span>
+    </a>
+    <h1 class="signature">Provision(args \\ [])</span>
+      <span class="note">(macro)</span>
+  </div>
+  <section class="docstring">
+  </section>
+</section>
+<section class="detail" id="Provision/2">
+  <div class="detail-header">
+    <a href="#Provision/2" class="detail-link" title="Link to this macro">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this macro</span>
+    </a>
+    <h1 class="signature">Provision(record, args)</span>
+      <span class="note">(macro)</span>
+  </div>
+  <section class="docstring">
+  </section>
+</section>
+<section class="detail" id="box/2">
+  <div class="detail-header">
+    <a href="#box/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature">box(mod, r)</span>
+  </div>
+  <section class="docstring">
+  </section>
+</section>
+<section class="detail" id="extract/3">
+  <div class="detail-header">
+    <a href="#extract/3" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature">extract(name, path, form)</span>
+  </div>
+  <section class="docstring">
+  </section>
+</section>
+          </div>
+        </section>
+      <footer class="footer">
+        <p>
+          <span class="line">
+            Built using
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener">ExDoc</a> (v0.20.2),
+          </span>
+          <span class="line">
+            designed by
+            <a href="https://twitter.com/dignifiedquire" target="_blank" rel="noopener" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+          </span>
+        </p>
+        <p>
+          <button class="line footer-button night-mode-toggle">
+            Toggle night mode
+          </button>
+          <button class="line footer-button display-shortcuts-help">
+            Display keyboard shortcuts
+          </button>
+        </p>
+      </footer>
+    </div>
+  </div>
+</section>
+</div>
+  </body>
+</html>
