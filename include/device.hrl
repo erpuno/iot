@@ -2,7 +2,10 @@
 -define(DEVICE_HRL, true).
 
 -include("location.hrl").
-
+-record(manufacturer,{
+        id      =       [] :: [] | binary(),
+        name    =       [] :: [] | binary()
+}).
 % 1. register new device
 % kvs:append(#'Device'{id = kvs:seq([],[])},
 %              "/iot/:client/:model").

@@ -11,10 +11,17 @@
 -include_lib("kvs/include/kvs.hrl").
 -include_lib("kvs/include/metainfo.hrl").
 -include_lib("kvs/include/cursors.hrl").
+-define(IOT_PF,"/iot/").
+
+select_rnd(MF) ->
+    #manufacturer{name=N} =  lists:nth(rand:uniform(length(MF)), MF),
+    N.
 
 register_devices(Client, Model) ->
-   kvs:append(#'Device'{id =
-      kvs:seq([],[])}, "/iot/dev/" ++ Client ++ "/" ++ Model).
+    kvs:append(#'Device'{id = kvs:seq([], []),
+			 manufacturer =
+			     select_rnd(kvs:all('/iot/manufacturer'))},
+	       "/iot/dev/" ++ Client ++ "/" ++ Model).
 
 register_event(Id,#'Event'{}=Event) ->
    kvs:append(Event#'Event'{id = kvs:seq([],[])}, "/iot/" ++ Id).
@@ -51,8 +58,16 @@ clients() ->
 index_PersonCN() ->
    lists:map(fun (#'Person'{id=ID,cn=CN}) ->
       kvs:put(#'PersonCN'{cn=CN,id=ID}) end, clients()).
+   
+boot_manufacturer()->
+   [kvs:append(M,"/iot/manufacturer") || M <- manufacturer()].
+
+manufacturer()->
+   [#manufacturer{id = kvs:seq([],[]), name = N} || 
+      N <- ["siemens","SATEC","GreenEmbeded"]].
 
 boot() ->
+   boot_manufacturer(),
    boot_root(),
    boot_clients(),
    index_PersonCN(),
@@ -60,9 +75,10 @@ boot() ->
 
 boot_root() ->
     Group   = [ #'Organization'{name="Quanterall"} ],
-
+   
     Structure    = [ {"/iot/clients", clients()},
-                     {"/iot/company", Group} ],
+                     {"/iot/company", Group}
+                  ],
 
     lists:foreach(fun({Feed, Data}) ->
         case kvs:get(writer, Feed) of
