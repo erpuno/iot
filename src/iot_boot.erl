@@ -64,7 +64,7 @@ boot_manufacturer()->
 
 manufacturer()->
    [#manufacturer{id = kvs:seq([],[]), name = N} || 
-      N <- ["siemens","SATEC","GreenEmbeded"]].
+      N <- ["siemens","SATEC","GreenEmbedded"]].
 
 boot() ->
    boot_manufacturer(),
