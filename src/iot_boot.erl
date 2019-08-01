@@ -14,7 +14,7 @@
 -define(IOT_PF,"/iot/").
 
 select_rnd(MF) ->
-    #manufacturer{name=N} =  lists:nth(rand:uniform(length(MF)), MF),
+    #'Manufacturer'{name=N} =  lists:nth(rand:uniform(length(MF)), MF),
     N.
 
 register_devices(Client, Model) ->
@@ -63,7 +63,7 @@ boot_manufacturer()->
    [kvs:append(M,"/iot/manufacturer") || M <- manufacturer()].
 
 manufacturer()->
-   [#manufacturer{id = kvs:seq([],[]), name = N} || 
+   [#'Manufacturer'{id = kvs:seq([],[]), name = N} || 
       N <- ["siemens","SATEC","GreenEmbedded"]].
 
 boot() ->

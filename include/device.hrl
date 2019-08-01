@@ -2,7 +2,7 @@
 -define(DEVICE_HRL, true).
 
 -include("location.hrl").
--record(manufacturer,{
+-record('Manufacturer',{
         id      =       [] :: [] | binary(),
         name    =       [] :: [] | binary()
 }).
