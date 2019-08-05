@@ -13,6 +13,7 @@ defmodule IOT.Application do
     :kvs.join()
     :iot_boot.boot()
     :cowboy.start_tls(:http, :n2o_cowboy.env(:iot), %{env: %{dispatch: :n2o_cowboy2.points()}})
+    :n2o.start_ws
     Supervisor.start_link([], strategy: :one_for_one, name: IOT.Supervisor)
   end
 end
