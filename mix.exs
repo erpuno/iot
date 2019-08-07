@@ -25,7 +25,7 @@ defmodule IOT.Mixfile do
   def application() do
     [
       mod: {IOT.Application, []},
-       applications: [:rocksdb, :kvs, :ranch, :cowboy, :nitro, :form, :n2o]
+       applications: [:rocksdb, :emqtt, :kvs, :ranch, :cowboy, :nitro, :form, :n2o]
     ]
   end
 
@@ -35,6 +35,7 @@ defmodule IOT.Mixfile do
       {:rocksdb, "~> 1.2.0"},
       {:n2o, "~> 6.7.7"},
       {:nitro, "~> 4.7.7"},
+      {:emqtt, github: "emqx/emqtt", tag: "v1.0.0"},
       {:cowboy, "~> 2.5.0"},
       {:form, "~> 4.7.0"},
       {:kvs, "~> 6.7.6"}
