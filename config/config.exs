@@ -2,8 +2,8 @@ use Mix.Config
 
 config :n2o,
   pickler: :n2o_secret,
-  mqtt_services: ['siemens','SATEC','GreenEmbedded'],
-  ws_services: ['chat','erp'],
+  mqtt_services: [:siemens,:"SATEC",:"GreenEmbedded"],
+  ws_services: [:chat,:erp],
   proto: IOT.Server,
   mq: :n2o_syn,
   port: 8044,
